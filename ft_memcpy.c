@@ -6,10 +6,10 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 10:30:52 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/18 10:42:29 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:47:26 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, t_size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);

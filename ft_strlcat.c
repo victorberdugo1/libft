@@ -6,10 +6,10 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 11:43:00 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/18 11:43:48 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:56:11 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);

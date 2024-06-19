@@ -6,13 +6,13 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 11:40:03 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/19 16:47:03 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:16:31 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int	res;
 	int	i;

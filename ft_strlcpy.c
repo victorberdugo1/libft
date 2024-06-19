@@ -6,10 +6,10 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 10:31:37 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/18 10:46:16 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:58:53 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, t_size_t n);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
