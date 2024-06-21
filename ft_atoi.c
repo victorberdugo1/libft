@@ -31,19 +31,18 @@ int	ft_atoi(const char *nptr)
 	}
 	while (ft_isdigit(nptr[i]) || nptr[i] != 0)
 	{
-		res = (res + ((nptr[i]) - 48)) * 10;
-		i++;
+		res = (res * 10) + (nptr[i] - '0');
+        i++;
 	}
-	return (0);
+	return (res * negf);
 }
-/*
+
 #include <stdio.h>
 #include <stdlib.h>	
 
 int main (int argc, char *argv[])
 {
 
-argc[] =
+printf("%s",ft_atoi(argv[1]));
 
 }
-*/
