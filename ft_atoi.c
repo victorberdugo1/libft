@@ -36,13 +36,13 @@ int	ft_atoi(const char *nptr)
 	}
 	return (res * negf);
 }
-
+/*
 #include <stdio.h>
 #include <stdlib.h>	
 
-int main (int argc, char *argv[])
+int main (int argc,const char *argv[])
 {
+argc = 0;
+printf("%d",ft_atoi(*argv[1]));
 
-printf("%s",ft_atoi(argv[1]));
-
-}
+}*/
