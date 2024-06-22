@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 11:36:48 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/22 11:42:35 by victor           ###   ########.fr       */
+/*   Updated: 2024/06/22 16:28:40 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int				i;
+	size_t			i;
 	unsigned char	*p1;
 	unsigned char	*p2;
 

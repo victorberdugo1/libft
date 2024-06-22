@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 11:26:52 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/22 11:15:00 by victor           ###   ########.fr       */
+/*   Updated: 2024/06/22 16:27:51 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*z;
-	int				con;
+	size_t			con;
 
 	z = (unsigned char *)s;
 	con = 0;
