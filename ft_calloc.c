@@ -16,14 +16,14 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*call;
-	size_t 			total_size;
+	size_t			total_size;
 
 	if (nmemb == 0 || size == 0 || size > (size_t)(-1) / nmemb)
 		return (NULL);
 	total_size = nmemb * size;
 	call = (unsigned char *)malloc(total_size);
 	if (call == NULL)
-        return (NULL);
+		return (NULL);
 	ft_bzero(call, nmemb);
-    return ((void *)call);
+	return ((void *)call);
 }

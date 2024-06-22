@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *st;
+	unsigned char	*st;
 
 	st = (unsigned char *)s;
 	while (n > 0)
@@ -24,7 +24,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 int main()
 {
@@ -39,4 +39,4 @@ int main()
 	printf("Buffer llenado: %s\n", buffer);
 
 	return 0;
-}
+}*/
