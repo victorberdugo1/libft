@@ -6,13 +6,13 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 10:29:19 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/18 12:00:19 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/06/26 10:03:31 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 227)
-		return (1024);
+	if (c >= 0 && c <= 127)
+		return (1);
 	return (0);
 }

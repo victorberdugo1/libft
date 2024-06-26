@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 11:38:28 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/22 17:03:25 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/06/26 09:55:48 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	if (little_len == 0)
 		return ((char *)big);
+	if (len < little_len)
+		return (NULL);
 	while (big[i] && i <= len - little_len)
 	{
 		j = 0;
