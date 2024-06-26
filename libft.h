@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 12:20:41 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/26 13:36:52 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/06/26 16:04:12 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ int		ft_toupper(int c);
 //Parte 2 - Funciones adicionales
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif

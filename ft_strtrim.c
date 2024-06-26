@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:13:54 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/26 16:00:13 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/06/26 16:22:22 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trim = (char *)malloc(len + 1);
 	if (!trim)
 		return (NULL);
-	ft_strncpy(trim, start, len);
-	trim[len] = '\0';
+	ft_strlcpy(trim, start, len + 1);
 	return (trim);
+}
+#include <stdio.h>
+int main() {
+    char const *s1 = "   Hello, world!   ";
+    char const *set = " H!";
+    char *trimmed = ft_strtrim(s1, set);
+
+    if (trimmed) {
+        printf("Cadena original: \"%s\"\n", s1);
+        printf("Conjunto a recortar: \"%s\"\n", set);
+        printf("Cadena recortada: \"%s\"\n", trimmed);
+
+        free(trimmed); // Liberar la memoria asignada por ft_strtrim
+    } else {
+        printf("Error: no se pudo recortar la cadena.\n");
+    }
+    return 0;
 }
