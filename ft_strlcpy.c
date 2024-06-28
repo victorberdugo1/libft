@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 10:31:37 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/22 16:58:02 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/06/28 15:47:01 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,14 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	const char	*s;
-	size_t		len;
-	size_t		i;
+	size_t	src_len;
+	size_t	i;
 
-	s = src;
-	len = 0;
+	src_len = 0;
+	while (src[src_len] != '\0')
+		src_len++;
 	i = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	if (size != 0)
+	if (size > 0)
 	{
 		while (i < size - 1 && src[i] != '\0')
 		{
@@ -34,7 +30,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		}
 		dst[i] = '\0';
 	}
-	return (len);
+	return (src_len);
 }
 /*#include <stdio.h>
 int main() {
