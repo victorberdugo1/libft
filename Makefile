@@ -6,7 +6,7 @@
 #    By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/15 13:10:35 by vberdugo          #+#    #+#              #
-#    Updated: 2024/06/30 17:53:15 by victor           ###   ########.fr        #
+#    Updated: 2024/06/30 21:58:06 by victor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalpha.c ft_isdigit.c \
 	ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 	ft_putendl_fd.c ft_putnbr_fd.c
 
-BONUS_SRC = ft_lstnew.c
+BONUS_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c
 
 OBJS = ${SRC:%.c=%.o}
 
@@ -44,14 +45,14 @@ ${NAME}: ${OBJS}
 	${CC} ${CFLAGS} -c $< -o $@
 
 clean:
-	rm -f ${OBJS} $(BONUS_OBJ)
+	rm -f ${OBJS} ${BONUS_OBJ}
 	
 fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
 
-bonus: ${OBJ} ${BONUS_OBJ}
-	${AR} ${NAME} ${OBJ} ${BONUS_OBJ}
+bonus: ${OBJS} ${BONUS_OBJ}
+	${AR} ${NAME} ${OBJS} ${BONUS_OBJ}
 
 .PHONY: all clean fclean re

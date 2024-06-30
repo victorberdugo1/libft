@@ -6,7 +6,7 @@
 /*   By: victor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/30 13:55:33 by victor            #+#    #+#             */
-/*   Updated: 2024/06/30 18:07:28 by victor           ###   ########.fr       */
+/*   Updated: 2024/06/30 20:58:03 by victor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list	*ft_lstnew(void *content)
 	new_node->next = NULL;
 	return (new_node);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main(void)
 {
@@ -40,4 +40,4 @@ int main(void)
     free(node);
     return (0);
 }
-
+*/
