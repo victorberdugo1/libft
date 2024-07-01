@@ -6,7 +6,7 @@
 #    By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/15 13:10:35 by vberdugo          #+#    #+#              #
-#    Updated: 2024/06/30 23:14:09 by victor           ###   ########.fr        #
+#    Updated: 2024/07/01 11:55:57 by victor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,8 @@ fclean: clean
 
 re: fclean all
 
-bonus: ${OBJS} ${BONUS_OBJ}
-	${AR} ${NAME} ${OBJS} ${BONUS_OBJ}
+bonus: ${BONUS_OBJ}
+	${AR} ${NAME} ${BONUS_OBJ}
+	ranlib ${NAME}
 
 .PHONY: all clean fclean re
