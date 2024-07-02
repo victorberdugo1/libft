@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 11:12:29 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/28 18:43:01 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/07/02 23:59:39 by victor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ char	**ft_split(char const *s, char c)
 
 int main(void) {
 	char **result;
-	char *str = "hola1 hola2 H4";
+	char *str = "   hola1  hola2 H4    ";
 	char delimiter = ' ';
 
 	result = ft_split(str, delimiter);

@@ -6,7 +6,7 @@
 #    By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/15 13:10:35 by vberdugo          #+#    #+#              #
-#    Updated: 2024/07/01 11:55:57 by victor           ###   ########.fr        #
+#    Updated: 2024/07/03 00:30:30 by victor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ ${NAME}: ${OBJS}
 	${AR} $@ $^
 	ranlib $@
 
-%.o:%.c libft.h
+%.o:%.c libft.h Makefile
 	${CC} ${CFLAGS} -c $< -o $@
 
 clean:
