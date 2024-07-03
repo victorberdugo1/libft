@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 11:24:29 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/22 17:27:52 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/07/03 10:18:11 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,14 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (last);
 }
+/*
+#include <stdio.h>
+#include <bsd/string.h>
+int main ()
+{
+	char  *str = "voy a repetir tu nombre";
+	char car = 'p';
+
+	printf("%s\n",ft_strrchr(str,car));
+	printf("%s",strrchr(str,car));
+}*/

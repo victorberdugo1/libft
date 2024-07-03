@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 17:12:02 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/22 16:48:37 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/07/03 10:49:10 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ char	*ft_strdup(const char *s)
 
 	len = ft_strlen(s) + 1;
 	dup = (char *)malloc(len);
-	if (dup)
-		ft_strlcpy(dup, s, len);
+	if (dup == NULL)
+		return (NULL);
+	ft_strlcpy(dup, s, len);
 	return (dup);
 }
 /*#include <stdio.h>

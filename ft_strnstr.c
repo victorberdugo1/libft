@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 11:38:28 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/26 09:55:48 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/07/03 10:11:32 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+/*
+#include <stdio.h>
+#include <bsd/string.h>
+int main (void)
+{
+	char *grande = "espacios vacios";
+	char *peque = "io";
+	printf("%s.\n",ft_strnstr(grande, peque, 10));
+printf("%s.\n",strnstr(grande, peque, 10));
+
+}*/
