@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 11:43:00 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/25 19:20:15 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/07/04 11:22:00 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,40 +34,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 }
 /*
 #include <stdio.h>
-#include <string.h>
-
-size_t strlcat(char *dst, const char *src, size_t siz)
-{
-    const char *s;
-    char *d;
-    size_t n;
-    size_t dlen;
-
-    for (d = dst, n = siz; n != 0 && *d != '\0'; d++, n--)
-        ;
-    dlen = d - dst;
-    n = siz - dlen;
-
-    if (n == 0)
-        return(dlen + strlen(src));
-
-    for (s = src; *s != '\0'; s++) {
-        if (n != 1) {
-            *d++ = *s;
-            n--;
-        }
-    }
-    *d = '\0';
-
-    return(dlen + (s - src));
-}
+#include <bsd/string.h>
 
 int main(void)
 {
     char dst1[8] = "Hello";
     char dst2[8] = "Hello";
     const char *src = " World";
-    size_t size = 2220;
+    size_t size = 4;
 
     size_t result_ft = ft_strlcat(dst1, src, size);
     size_t result_std = strlcat(dst2, src, size);

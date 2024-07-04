@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 11:12:29 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/07/02 23:59:39 by victor           ###   ########.fr       */
+/*   Updated: 2024/07/03 12:41:49 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,25 +62,24 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 	int		start;
-	int		len;
 
 	i = 0;
 	j = -1;
-	splt = (char **)malloc((count_c(s, c) + 1) * sizeof(char *));
-	if (splt == NULL || s == NULL)
+	if (s == NULL)
 		return (NULL);
-	splt[count_c(s, c)] = NULL;
+	splt = (char **)ft_calloc((count_c(s, c) + 1), sizeof(char *));
+	if (splt == NULL)
+		return (NULL);
 	while (++j < count_c(s, c))
 	{
 		start = find_s(s, c, &i);
-		len = i - start;
-		splt[j] = (char *)malloc((len + 1) * sizeof(char));
+		splt[j] = (char *)ft_calloc((i - start + 1), sizeof(char));
 		if (splt[j] == NULL)
 		{
 			free_splt(splt, j);
 			return (NULL);
 		}
-		ft_strlcpy(splt[j], &s[start], len + 1);
+		ft_strlcpy(splt[j], &s[start], i - start + 1);
 	}
 	return (splt);
 }
