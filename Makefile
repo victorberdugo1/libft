@@ -6,7 +6,7 @@
 #    By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/15 13:10:35 by vberdugo          #+#    #+#              #
-#    Updated: 2024/07/04 11:09:26 by vberdugo         ###   ########.fr        #
+#    Updated: 2024/07/04 14:57:18 by vberdugo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalpha.c ft_isdigit.c \
 	ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 	ft_putendl_fd.c ft_putnbr_fd.c
 
-BONUS_SRC = ft_lstnew.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
+BONUS_SRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
 			ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c \
 			ft_lstiter_bonus.c ft_lstmap_bonus.c
 
@@ -53,11 +53,9 @@ fclean: clean
 
 re: fclean all
 
-bonus: .bonus
-
-.bonus: ${BONUS_OBJ}
+bonus: ${NAME} ${BONUS_OBJ}
 	${AR} ${NAME} ${BONUS_OBJ}
 	ranlib ${NAME}
-	touch .bonus
+
 
 .PHONY: all clean fclean re
