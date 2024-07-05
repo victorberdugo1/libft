@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 11:40:03 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/29 15:19:45 by victor           ###   ########.fr       */
+/*   Updated: 2024/07/05 10:59:51 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,26 +29,22 @@ int	ft_atoi(const char *nptr)
 			negf = -1;
 		i++;
 	}
-	if (ft_isdigit(nptr[i]))
+	while (ft_isdigit(nptr[i]))
 	{
-		while (ft_isdigit(nptr[i]))
-		{
-			res = (res * 10) + (nptr[i] - '0');
-			i++;
-		}
-		return (res * negf);
+		res = (res * 10) + (nptr[i] - '0');
+		i++;
 	}
-	return (0);
+	return (res * negf);
 }
 /*
 #include <stdio.h>
 #include <stdlib.h>	
 
-int main (int argc,char *argv[])
+int	main(int argc, char *argv[])
 {
-	if(argc != 2)
-		return 1;
-	printf("%d\n",ft_atoi(argv[1]));
-	printf("%d",atoi(argv[1]));
-return 0;
+	if (argc != 2)
+		return (1);
+	printf("%d\n", ft_atoi(argv[1]));
+	printf("%d", atoi(argv[1]));
+	return (0);
 }*/

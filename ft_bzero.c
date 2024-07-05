@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 10:30:24 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/21 14:31:04 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/07/05 12:24:31 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 	}
 }
-/*
+
 #include <stdio.h>
 #include <string.h>
 void print_bytes(const char *str, size_t len)
@@ -59,4 +59,4 @@ int main()
     print_bytes(cadena, sizeof(cadena));
 
     return 0;
-}*/
+}
