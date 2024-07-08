@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 12:34:36 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/07/03 09:17:09 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/07/08 11:01:11 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,24 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
-	int		i;
+	size_t	i;
 
+	if (s == NULL)
+		return (NULL);
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
-	i = 0;
-	sub = (char *)malloc((len - start + 1) * sizeof(char));
+	if (start + len > ft_strlen(s))
+		len = ft_strlen(s) - start;
+	sub = (char *)malloc((len + 1) * sizeof(char));
 	if (sub == NULL)
 		return (NULL);
-	while (s[start] != 0 && start < len)
+	i = 0;
+	while (i < len && s[start + i] != '\0')
 	{
-		sub[i] = s[start];
-		start++;
+		sub[i] = s[start + i];
 		i++;
 	}
-	sub[i] = 0;
+	sub[i] = '\0';
 	return (sub);
 }
 /*#include <stdio.h>
@@ -50,7 +53,6 @@ int main(void)
     {
         printf("Error: Substring returned NULL\n");
     }
-
     // Test case 2: Empty string
     char *str2 = "";
     result = ft_substr(str2, 0, 5);
@@ -63,19 +65,13 @@ int main(void)
     {
         printf("Error: Substring returned NULL\n");
     }
-
     // Test case 3: Null pointer
     char *str3 = NULL;
     result = ft_substr(str3, 0, 5);
-    if (result != NULL)
+    if (result == NULL)
     {
         printf("Null pointer: '%s'\n", result);
         free(result);
     }
-    else
-    {
-        printf("Error: Substring returned NULL\n");
-    }
-
-    return 0;
+    return (0);
 }*/

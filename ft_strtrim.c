@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:13:54 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/06/27 10:54:47 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/07/08 11:24:40 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,19 +36,24 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (trim);
 }
 /*#include <stdio.h>
-int main() {
-    char const *s1 = "   Hello, world!   ";
-    char const *set = " H!";
-    char *trimmed = ft_strtrim(s1, set);
 
-    if (trimmed) {
-        printf("Cadena original: \"%s\"\n", s1);
-        printf("Conjunto a recortar: \"%s\"\n", set);
-        printf("Cadena recortada: \"%s\"\n", trimmed);
+int	main(void) 
+{
+	char const	*s1 = "   Hello, world!   ";
+	char const	*set = " H!";
+	char	*trimmed = ft_strtrim(s1, set);
 
-        free(trimmed); // Liberar la memoria asignada por ft_strtrim
-    } else {
-        printf("Error: no se pudo recortar la cadena.\n");
-    }
-    return 0;
-}*/
+	if (trimmed) {
+		printf("Cadena original: \"%s\"\n", s1);
+		printf("Conjunto a recortar: \"%s\"\n", set);
+		printf("Cadena recortada: \"%s\"\n", trimmed);
+
+		free(trimmed);
+	}
+	else
+	{
+		printf("Error: no se pudo recortar la cadena.\n");
+	}
+	return 0;
+}
+*/

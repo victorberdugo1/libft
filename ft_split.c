@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 11:12:29 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/07/03 12:41:49 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/07/08 11:29:26 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@
 static int	count_c(const char *s, char c)
 {
 	int	count;
-	int	in_substring;
+	int	in_substr;
 
 	count = 0;
-	in_substring = 0;
+	in_substr = 0;
 	while (*s != '\0')
 	{
 		if (*s == c)
-			in_substring = 0;
-		else if (!in_substring)
+			in_substr = 0;
+		else if (!in_substr)
 		{
-			in_substring = 1;
+			in_substr = 1;
 			count++;
 		}
 		s++;
@@ -84,7 +84,6 @@ char	**ft_split(char const *s, char c)
 	return (splt);
 }
 /*
-
 #include <stdio.h>
 
 int main(void) {
@@ -97,21 +96,17 @@ int main(void) {
 		printf("Error: ft_split devolvió NULL\n");
 		return 1;
 	}
-
 	int i = 0;
 	while (result[i] != NULL) {
 		printf("Cadena %d: %s\n", i, result[i]);
 		i++;
 	}
-
-	// Liberar memoria
 	i = 0;
 	while (result[i] != NULL) {
 		free(result[i]);
 		i++;
 	}
 	free(result);
-
-	return 0;
+	return (0);
 }
 */

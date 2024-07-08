@@ -6,7 +6,7 @@
 /*   By: victor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 12:51:55 by victor            #+#    #+#             */
-/*   Updated: 2024/07/01 12:05:42 by victor           ###   ########.fr       */
+/*   Updated: 2024/07/08 11:32:24 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,14 +61,13 @@ int main(void)
     int numbers[] = {0, 1, -1, 123, -123, 2147483647, -2147483648};
     size_t count = sizeof(numbers) / sizeof(numbers[0]);
     char *str;
-
     for (size_t i = 0; i < count; i++)
     {
         str = ft_itoa(numbers[i]);
         if (str)
         {
             printf("ft_itoa(%d) = %s\n", numbers[i], str);
-            free(str); // Asegúrate de liberar la memoria
+            free(str);
         }
         else
         {
@@ -76,6 +75,6 @@ int main(void)
         }
     }
 
-    return 0;
+    return (0);
 }
 */

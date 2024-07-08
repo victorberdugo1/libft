@@ -6,7 +6,7 @@
 /*   By: victor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 23:06:10 by victor            #+#    #+#             */
-/*   Updated: 2024/06/29 23:23:11 by victor           ###   ########.fr       */
+/*   Updated: 2024/07/08 11:37:33 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 /*#include <stdio.h>
 void to_uppercase(unsigned int index, char *c)
 {
-    *c = ft_toupper(*c); // Convierte el carácter a mayúscula
+    *c = ft_toupper(*c); 
 }
 int main()
 {
