@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 13:14:46 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/07/08 11:18:56 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/07/08 14:36:51 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*join;
 	int		i;
 
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	if (s1 == NULL)
-		return (ft_strdup(s2));
-	if (s2 == NULL)
-		return (ft_strdup(s1));
 	i = 0;
-	join = (char *)malloc((ft_strlen(s1) + ft_strlen(s2)) - 1);
+	join = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (join == NULL)
 		return (NULL);
 	while (s1[i])
@@ -41,12 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[i] = 0;
 	return (join);
 }
-/*#include <stdio.h>
-int main (void)
-{
-	char *cad1 = "uno";
-	char *cad2 = (void *)0;
-
-	printf("%s\n", ft_strjoin(cad1,cad2));
-	return (0);
-}*/
