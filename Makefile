@@ -6,7 +6,7 @@
 #    By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/15 13:10:35 by vberdugo          #+#    #+#              #
-#    Updated: 2024/07/04 14:57:18 by vberdugo         ###   ########.fr        #
+#    Updated: 2024/07/08 12:21:20 by vberdugo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,22 +40,23 @@ all: ${NAME}
 
 ${NAME}: ${OBJS}
 	${AR} $@ $^
-	ranlib $@
 
 %.o:%.c libft.h Makefile
 	${CC} ${CFLAGS} -c $< -o $@
 
 clean:
 	rm -f ${OBJS} ${BONUS_OBJ}
+	rm -f .bonus
 	
 fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
 
-bonus: ${NAME} ${BONUS_OBJ}
-	${AR} ${NAME} ${BONUS_OBJ}
-	ranlib ${NAME}
+bonus: .bonus
 
+.bonus: ${BONUS_OBJ}
+	${AR} ${NAME} ${BONUS_OBJ}
+	touch .bonus
 
 .PHONY: all clean fclean re
