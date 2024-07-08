@@ -6,13 +6,15 @@
 #    By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/15 13:10:35 by vberdugo          #+#    #+#              #
-#    Updated: 2024/07/08 12:21:20 by vberdugo         ###   ########.fr        #
+#    Updated: 2024/07/08 13:12:07 by vberdugo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-# Parte 2 - Funciones adicionales desde ft_substr.c
+HBONUS = .bonus
+
+# Part 2 - Funtions from ft_substr.c
 SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalpha.c ft_isdigit.c \
 	ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memchr.c \
 	ft_memcmp.c ft_memcpy.c ft_strlcat.c ft_strlcpy.c ft_strlen.c \
@@ -38,25 +40,25 @@ CFLAGS = -Wall -Wextra -Werror -I.
 
 all: ${NAME}
 
+bonus: $(HBONUS)
+	touch $(HBONUS)
+
 ${NAME}: ${OBJS}
 	${AR} $@ $^
+
+$(HBONUS): $(OBJS) $(BONUS_OBJ)
+	ar rc $(NAME) $^
 
 %.o:%.c libft.h Makefile
 	${CC} ${CFLAGS} -c $< -o $@
 
 clean:
 	rm -f ${OBJS} ${BONUS_OBJ}
-	rm -f .bonus
-	
+	rm -rf $(HBONUS)
+
 fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
-
-bonus: .bonus
-
-.bonus: ${BONUS_OBJ}
-	${AR} ${NAME} ${BONUS_OBJ}
-	touch .bonus
 
 .PHONY: all clean fclean re
