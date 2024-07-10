@@ -6,7 +6,7 @@
 /*   By: victor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 23:06:10 by victor            #+#    #+#             */
-/*   Updated: 2024/07/08 11:37:33 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/07/08 12:37:20 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-/*#include <stdio.h>
-void to_uppercase(unsigned int index, char *c)
-{
-    *c = ft_toupper(*c); 
-}
-int main()
-{
-    char str[] = "hello";
-    ft_striteri(str, &to_uppercase);
-    printf("Modificado: %s\n", str);
-    return 0;
-}*/

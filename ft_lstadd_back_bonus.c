@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: victor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/30 20:52:03 by victor            #+#    #+#             */
-/*   Updated: 2024/06/30 22:53:46 by victor           ###   ########.fr       */
+/*   Updated: 2024/07/08 12:25:33 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,32 +26,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		last->next = new;
 	}
 }
-/*#include <stdio.h>
-#include <stdlib.h>
-int main(void)
-{
-    // Crear algunos nodos
-    t_list *node1 = ft_lstnew("Nodo 1");
-    t_list *node2 = ft_lstnew("Nodo 2");
-    t_list *node3 = ft_lstnew("Nodo 3");
-    // Inicializar la lista con el primer nodo
-    t_list *list = node1;
-    // Añadir un nodo al frente de la lista
-    ft_lstadd_front(&list, node2);
-    // Añadir un nodo al final de la lista
-    ft_lstadd_back(&list, node3);
-    // Obtener y mostrar el tamaño de la lista
-    int size = ft_lstsize(list);
-    printf("Tamaño de la lista: %d\n", size);
-    // Obtener y mostrar el último nodo de la lista
-    t_list *last = ft_lstlast(list);
-    if (last)
-        printf("Último nodo de la lista: %s\n", (char *)last->content);
-    // Liberar memoria
-    free(node1);
-    free(node2);
-    free(node3);
-
-    return 0;
-}
-*/

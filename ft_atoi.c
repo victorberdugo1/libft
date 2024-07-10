@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 11:40:03 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/07/07 01:47:43 by victor           ###   ########.fr       */
+/*   Updated: 2024/07/08 12:23:25 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (res * negf);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>	
-
-int main (int argc,char *argv[])
-{
-	if(argc != 2)
-		return 1;
-	printf("%d\n",ft_atoi(argv[1]));
-	printf("%d",atoi(argv[1]));
-return 0;
-}*/

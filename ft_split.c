@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 11:12:29 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/07/08 11:29:26 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/07/08 12:36:07 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,30 +83,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (splt);
 }
-/*
-#include <stdio.h>
-
-int main(void) {
-	char **result;
-	char *str = "   hola1  hola2 H4    ";
-	char delimiter = ' ';
-
-	result = ft_split(str, delimiter);
-	if (result == NULL) {
-		printf("Error: ft_split devolvió NULL\n");
-		return 1;
-	}
-	int i = 0;
-	while (result[i] != NULL) {
-		printf("Cadena %d: %s\n", i, result[i]);
-		i++;
-	}
-	i = 0;
-	while (result[i] != NULL) {
-		free(result[i]);
-		i++;
-	}
-	free(result);
-	return (0);
-}
-*/

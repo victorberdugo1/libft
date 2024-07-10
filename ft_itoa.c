@@ -6,7 +6,7 @@
 /*   By: victor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 12:51:55 by victor            #+#    #+#             */
-/*   Updated: 2024/07/08 11:32:24 by vberdugo         ###   ########.fr       */
+/*   Updated: 2024/07/08 12:25:03 by vberdugo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,28 +53,3 @@ char	*ft_itoa(int n)
 	}
 	return (res);
 }
-/*
-#include <stdio.h>
-//length = (n <= -1) ? 1 : 0;
-int main(void)
-{
-    int numbers[] = {0, 1, -1, 123, -123, 2147483647, -2147483648};
-    size_t count = sizeof(numbers) / sizeof(numbers[0]);
-    char *str;
-    for (size_t i = 0; i < count; i++)
-    {
-        str = ft_itoa(numbers[i]);
-        if (str)
-        {
-            printf("ft_itoa(%d) = %s\n", numbers[i], str);
-            free(str);
-        }
-        else
-        {
-            printf("ft_itoa(%d) = NULL\n", numbers[i]);
-        }
-    }
-
-    return (0);
-}
-*/
