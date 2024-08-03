@@ -6,15 +6,12 @@
 #    By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/15 13:10:35 by vberdugo          #+#    #+#              #
-#    Updated: 2024/07/08 13:12:07 by vberdugo         ###   ########.fr        #
+#    Updated: 2024/08/03 12:59:07 by vberdugo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-HBONUS = .bonus
-
-# Part 2 - Funtions from ft_substr.c
 SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalpha.c ft_isdigit.c \
 	ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memchr.c \
 	ft_memcmp.c ft_memcpy.c ft_strlcat.c ft_strlcpy.c ft_strlen.c \
@@ -22,15 +19,11 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalpha.c ft_isdigit.c \
 	ft_memmove.c ft_memset.c ft_strchr.c ft_strdup.c \
 	ft_substr.c ft_strjoin.c ft_strtrim.c  ft_split.c ft_itoa.c \
 	ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
-	ft_putendl_fd.c ft_putnbr_fd.c
-
-BONUS_SRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
-			ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c \
-			ft_lstiter_bonus.c ft_lstmap_bonus.c
+	ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c ft_lstadd_front.c \
+	ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+	ft_lstclear.c ft_lstiter.c ft_lstmap.c get_next_line.c
 
 OBJS = ${SRC:%.c=%.o}
-
-BONUS_OBJ = $(BONUS_SRC:%.c=%.o)
 
 AR = ar rcs
 
@@ -40,21 +33,14 @@ CFLAGS = -Wall -Wextra -Werror -I.
 
 all: ${NAME}
 
-bonus: $(HBONUS)
-	touch $(HBONUS)
-
 ${NAME}: ${OBJS}
 	${AR} $@ $^
-
-$(HBONUS): $(OBJS) $(BONUS_OBJ)
-	ar rc $(NAME) $^
 
 %.o:%.c libft.h Makefile
 	${CC} ${CFLAGS} -c $< -o $@
 
 clean:
 	rm -f ${OBJS} ${BONUS_OBJ}
-	rm -rf $(HBONUS)
 
 fclean: clean
 	rm -f ${NAME}
