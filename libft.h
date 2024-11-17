@@ -6,14 +6,13 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 12:20:41 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/09/10 19:13:38 by victor           ###   ########.fr       */
+/*   Updated: 2024/11/14 12:01:33 by victor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-//typedef unsigned long	t_size_t;
 # include <stddef.h>
 # include <stdarg.h>
 
@@ -83,5 +82,10 @@ char	*get_next_line(int fd);
 int		ft_printf(char const *format, ...);
 //push_swap
 long	ft_atol(const char *s);
+//add new
+int		ft_strcmp(const char *s1, const char *s2);
+char	*ft_strcpy(char *dest, const char *src);
+char	*ft_strcat(char *dest, const char *src);
+char	*ft_strtok(char *str, const char *delim);
 
 #endif
