@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtok.c                                        :+:      :+:    :+:   */
+/*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: victor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 11:54:30 by victor            #+#    #+#             */
-/*   Updated: 2024/11/26 18:47:19 by victor           ###   ########.fr       */
+/*   Created: 2024/11/27 16:05:25 by victor            #+#    #+#             */
+/*   Updated: 2024/11/27 16:13:13 by victor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtok(char *str, const char *delim)
+void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
 {
-	static char	*last;
-	char		*start;
-	char		*end;
+	void	*new_ptr;
+	size_t	copy_size;
 
-	if (str)
-		last = str;
-	if (!last)
-		return (NULL);
-	start = last;
-	while (*start && ft_strchr(delim, *start))
-		start++;
-	if (*start == '\0')
-		return (last = NULL, NULL);
-	end = start;
-	while (*end && !ft_strchr(delim, *end))
-		end++;
-	if (*end)
+	if (new_size == 0)
 	{
-		*end = '\0';
-		last = end + 1;
+		free(ptr);
+		return (NULL);
 	}
-	else
-		last = NULL;
-	return (start);
+	if (ptr == NULL)
+		return (malloc(new_size));
+	new_ptr = malloc(new_size);
+	if (!new_ptr)
+		return (NULL);
+	copy_size = old_size;
+	if (old_size > new_size)
+		copy_size = new_size;
+	ft_memcpy(new_ptr, ptr, copy_size);
+	free(ptr);
+	return (new_ptr);
 }
