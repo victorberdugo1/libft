@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtok.c                                        :+:      :+:    :+:   */
+/*   ft_isnumber.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: victor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 11:54:30 by victor            #+#    #+#             */
-/*   Updated: 2024/11/26 18:47:19 by victor           ###   ########.fr       */
+/*   Created: 2024/12/09 10:29:05 by victor            #+#    #+#             */
+/*   Updated: 2024/12/09 10:30:43 by victor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtok(char *str, const char *delim)
+int	ft_isnumber(const char *str)
 {
-	static char	*last;
-	char		*start;
-	char		*end;
+	int	i;
 
-	if (str)
-		last = str;
-	if (!last)
-		return (NULL);
-	start = last;
-	while (*start && ft_strchr(delim, *start))
-		start++;
-	if (*start == '\0')
-		return (last = NULL, NULL);
-	end = start;
-	while (*end && !ft_strchr(delim, *end))
-		end++;
-	if (*end)
+	if (!str || *str == '\0')
+		return (0);
+	i = 0;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i])
 	{
-		*end = '\0';
-		last = end + 1;
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+		i++;
 	}
-	else
-		last = NULL;
-	return (start);
+	return (1);
 }
