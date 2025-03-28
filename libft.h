@@ -6,7 +6,7 @@
 /*   By: vberdugo <vberdugo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 12:20:41 by vberdugo          #+#    #+#             */
-/*   Updated: 2024/12/11 16:13:59 by victor           ###   ########.fr       */
+/*   Updated: 2025/03/28 12:39:43 by victor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+typedef struct s_block
+{
+	size_t	size;
+}	t_block;
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
@@ -88,8 +93,10 @@ int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strtok(char *str, const char *delim);
-void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 int		ft_isnumber(const char *str);
 char	*ft_strsep(char **stringp, const char *delim, int *in_q, char *q_char);
+void	*ft_malloc(size_t size);
+void	ft_free(void *ptr);
+void	*ft_realloc(void *ptr, size_t new_size);
 
 #endif
